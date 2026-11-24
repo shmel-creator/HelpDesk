@@ -102,7 +102,7 @@ public interface IEquipmentRepository
     List<Equipment> GetActive();
 }
 
-// Расчёт дедлайна SLA в зависимости от приоритета
+// Расчёт дедлайна SLA в часах в зависимости от приоритета (исправлено BUG-01)
 public class SlaCalculator
 {
     public DateTime CalculateSlaDeadline(DateTime createdAt, Priority priority)
