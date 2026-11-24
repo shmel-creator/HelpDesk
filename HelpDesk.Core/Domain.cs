@@ -184,6 +184,7 @@ public class TicketService
     // Валидирует поля и создаёт новую заявку со статусом New
     public int CreateTicket(Ticket ticket)
     {
+        // Блокировка пустого заголовка и строк из одних пробелов (исправлено BUG-03)
         if (string.IsNullOrWhiteSpace(ticket.Title))
         {
             throw new DomainException("Поле Title (заголовок) не может быть пустым.");
