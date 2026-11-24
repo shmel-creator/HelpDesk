@@ -76,6 +76,7 @@ public partial class MainWindow : Window
         try
         {
             var selectedEquipment = this.equipmentBox.SelectedItem as Equipment;
+            // Проверка выбора оборудования перед созданием заявки (исправлено BUG-02)
             if (selectedEquipment == null)
             {
                 MessageBox.Show("Выберите оборудование.", "Внимание", MessageBoxButton.OK, MessageBoxImage.Warning);
